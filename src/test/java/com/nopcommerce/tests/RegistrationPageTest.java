@@ -25,10 +25,10 @@ public class RegistrationPageTest {
         driver = basePage.initializeDriver(browser);
         driver.get(prop.getProperty("url"));
         registrationPage = new RegistrationPage(driver);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         homePage= new HomePage(driver);
         registrationPage = homePage.clickRegisterButton();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
     @Test
     public void registrationTest(){
@@ -36,3 +36,4 @@ public class RegistrationPageTest {
         prop.getProperty("companyName"),prop.getProperty("password"), prop.getProperty("confirmPassword"));
     }
 }
+
